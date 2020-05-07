@@ -16,6 +16,10 @@ button {
   width: 35vw;
 }
 
+a:hover {
+  text-decoration: none;
+}
+
 @media (max-width: 768px) {
   .card {
     width: 90vw;

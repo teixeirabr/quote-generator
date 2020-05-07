@@ -57,6 +57,7 @@ function App() {
               <a
                 href={`https://twitter.com/intent/tweet?hashtags=quotes&text=${quote.starWarsQuote}`}
                 target='_blank'
+                rel='noopener noreferrer'
               >
                 <Button
                   block
