@@ -16,7 +16,7 @@ function App() {
     background = { backgroundColor: color }
   const getQuote = (): void => {
     axios
-      .get('https://swquotesapi.digitaljedi.dk/api/SWQuote/RandomStarWarsQuote')
+      .get('//swquotesapi.digitaljedi.dk/api/SWQuote/RandomStarWarsQuote')
       .then((res) => setQuote(res.data))
       .catch((err) => console.log(err))
   }
