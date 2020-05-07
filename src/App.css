@@ -1,27 +1,4 @@
-.App {
-  text-align: center;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.App,
-button {
-  transition: background-color 0.5s ease-in;
-}
-
-.card {
-  width: 35vw;
-}
-
-a:hover {
-  text-decoration: none;
-}
-
-@media (max-width: 768px) {
-  .card {
-    width: 90vw;
-  }
+body {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bolder;
 }
