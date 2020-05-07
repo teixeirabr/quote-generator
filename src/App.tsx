@@ -1,26 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react'
+import getHexColor from './utils/getHexColor'
+// import Card from 'react-bootstrap/Card'
+import { Button } from 'react-bootstrap'
+import './App.css'
 
+interface Style {
+  backgroundColor: string
+}
 function App() {
+  const [color, setColor] = useState<string>('')
+  const Background: Style = { backgroundColor: color }
+  useEffect(() => {
+    if (!Background.backgroundColor) setColor(getHexColor())
+  })
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={Background} className='App'>
+      {/* <Card> */}
+      {/* <Card.Body> */}
+      {/* <Card.Text>blah</Card.Text> */}
+      <Button
+        onClick={() => {
+          setColor(getHexColor())
+        }}
+      >
+        Random Quote
+      </Button>
+      {/* </Card.Body> */}
+      {/* </Card> */}
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
