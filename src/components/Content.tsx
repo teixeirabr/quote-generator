@@ -26,7 +26,7 @@ export default function Content(props: Props) {
       <Card className='card'>
         <Card.Header as='h2'>Star Wars Quotes</Card.Header>
         <Card.Body>
-          <Row id='text'>
+          <Row id='text' className='align-items-center'>
             <Col md={10}>
               <h4>
                 <strong>"</strong>
