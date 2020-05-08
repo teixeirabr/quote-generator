@@ -28,6 +28,10 @@ function App() {
       getQuote()
       fade('text', true)
     }
+    window.onload = () => {
+      if (window.location.protocol === 'https:')
+        window.location.protocol = 'http'
+    }
   })
   return (
     <Content
