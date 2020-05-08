@@ -8,8 +8,8 @@ interface Style {
   backgroundColor: string
 }
 interface Quote {
-  id: number
   starWarsQuote: string
+  character: string
   faction: number
 }
 interface Props {
@@ -28,10 +28,11 @@ export default function Content(props: Props) {
         <Card.Body>
           <Row id='text' className='align-items-center'>
             <Col md={10}>
-              <h4>
+              <h3>
                 <strong>"</strong>
                 {quote.starWarsQuote}
-              </h4>
+              </h3>
+              <h5 className='character'>-{quote.character}</h5>
             </Col>
             <Col md={2}>
               <Image
@@ -44,7 +45,7 @@ export default function Content(props: Props) {
           <Row className='mt-2 mt-md-3'>
             <Col md={6}>
               <a
-                href={`https://twitter.com/intent/tweet?hashtags=quotes&text=${quote.starWarsQuote}`}
+                href={`https://twitter.com/intent/tweet?hashtags=quotes&text=${quote.starWarsQuote}  -${quote.character}`}
                 target='_blank'
                 rel='noopener noreferrer'
               >

@@ -9,15 +9,15 @@ import './utils/animations/fade.css'
 function App() {
   const [color, setColor] = useState<string>(''),
     [quote, setQuote] = useState({
-      id: 0,
       starWarsQuote: '',
+      character: '',
       faction: 0,
     }),
     background = { backgroundColor: color }
   const getQuote = (): void => {
     axios
       // cheats heroku https and allows to make a http req
-      .get('//swquotesapi.digitaljedi.dk/api/SWQuote/RandomStarWarsQuote')
+      .get('/api/quote')
       .then((res) => setQuote(res.data))
       .catch((err) => console.log(err))
   }

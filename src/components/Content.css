@@ -15,7 +15,10 @@ button {
 #text {
   opacity: 0;
 }
-
+.character {
+  text-align: right !important;
+  color: gray;
+}
 .card {
   width: 35vw;
 }
@@ -27,5 +30,11 @@ a:hover {
 @media (max-width: 768px) {
   .card {
     width: 90vw;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1400px) {
+  .card {
+    width: 50vw;
   }
 }
