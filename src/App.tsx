@@ -16,7 +16,7 @@ function App() {
     background = { backgroundColor: color }
   const getQuote = (): void => {
     axios
-      // cheats heroku https protocall and allows to make a http req
+      // cheats heroku https and allows to make a http req
       .get('//swquotesapi.digitaljedi.dk/api/SWQuote/RandomStarWarsQuote')
       .then((res) => setQuote(res.data))
       .catch((err) => console.log(err))
@@ -27,10 +27,6 @@ function App() {
     if (!quote.starWarsQuote) {
       getQuote()
       fade('text', true)
-    }
-    window.onload = () => {
-      if (window.location.protocol === 'https:')
-        window.location.protocol = 'http'
     }
   })
   return (
