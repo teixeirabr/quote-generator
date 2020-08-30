@@ -1,7 +1,7 @@
 const express = require('express'),
   app = express(),
   quoteController = require('./controllers/quoteController'),
-  PORT = process.env.PORT || 4420
+  PORT = process.env.PORT || 9000
 
 app.use(express.static(`${__dirname}/../build`))
 app.get('/api/quote', quoteController.getQuote)
