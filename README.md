@@ -1,7 +1,6 @@
 # Introduction
 
-Get random quotes from various **Star Wars** Heroes and Villains.
-If you like the quote you get you can tweet it via twitter's api (node required!!!!).
+Get random quotes from various **Star Wars** Heroes and Villains. If you like the quote you get, you can tweet it via twitter's api.(node required!!!!).
 
 ## To Run This App </>
 
