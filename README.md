@@ -15,4 +15,4 @@ If you like the qoute you get you can tweet it (node required!!!!).
    `node server/index.js`
    ###### If you have nodemon installed run this command
    `nodemon`
-5. Open your browser and navigate to [localhost:9000](http://localhost:9000)
+5. Open your browser and navigate to [localhost:9000](http://localhost:9000) to view app
