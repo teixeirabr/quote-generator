@@ -1,77 +1,77 @@
-import React from 'react'
-import rebels from '../assets/rebels.png'
-import empire from '../assets/empire.png'
-import { Button, Card, Row, Col, Image } from 'react-bootstrap'
-import './Content.css'
+import React from "react";
+import rebels from "../assets/rebels.png";
+import empire from "../assets/empire.png";
+import { Button, Card, Row, Col, Image } from "react-bootstrap";
+import "./Content.css";
 
 interface Style {
-  backgroundColor: string
+  backgroundColor: string;
 }
 interface Quote {
-  starWarsQuote: string
-  character: string
-  faction: number
+  starWarsQuote: string;
+  character: string;
+  faction: number;
 }
 interface Props {
-  quote: Quote
-  background: Style
-  getColor: () => void
-  getQuote: () => void
-  fade: (id: string, fadeIn?: boolean) => void
+  quote: Quote;
+  background: Style;
+  getColor: () => void;
+  getQuote: () => void;
+  fade: (id: string, fadeIn?: boolean) => void;
 }
 export default function Content(props: Props) {
-  const { quote, background, getColor, getQuote, fade } = props
+  const { quote, background, getColor, getQuote, fade } = props;
   return (
-    <div style={background} className='Content'>
-      <Card className='card'>
-        <Card.Header as='h2'>Star Wars Quotes</Card.Header>
+    <div style={background} className="Content">
+      <Card className="card">
+        <Card.Header as="h2">Star Wars Quotes by Luke M.</Card.Header>
         <Card.Body>
-          <Row id='text' className='align-items-center'>
+          <Row id="text" className="align-items-center">
             <Col md={10}>
               <h3>
                 <strong>"</strong>
                 {quote.starWarsQuote}
               </h3>
-              <h5 className='character'>-{quote.character}</h5>
+              <h5 className="character">-{quote.character}</h5>
             </Col>
             <Col md={2}>
               <Image
                 src={quote.faction === 0 ? rebels : empire}
                 fluid
-                className='mt-2 mt-md-0'
+                className="mt-2 mt-md-0"
               />
             </Col>
           </Row>
-          <Row className='mt-2 mt-md-3'>
+          <Row className="mt-2 mt-md-3">
             <Col md={6}>
               <a
                 href={`https://twitter.com/intent/tweet?hashtags=quotes&text=${quote.starWarsQuote}  -${quote.character}`}
-                target='_blank'
-                rel='noopener noreferrer'
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Button
                   block
                   style={background}
-                  variant='outline-light'
-                  size={'lg'}
+                  variant="outline-light"
+                  size={"lg"}
                 >
                   Tweet
                 </Button>
               </a>
             </Col>
-            <Col md={6} className='mt-2 mt-md-0'>
+            <Col md={6} className="mt-2 mt-md-0">
               <Button
                 block
                 style={background}
-                variant='outline-light'
-                size={'lg'}
+                variant="outline-light"
+                size={"lg"}
                 onClick={() => {
-                  getColor()
-                  fade('text')
+                  getColor();
+                  fade("text");
                   setTimeout(() => {
-                    fade('text', true)
-                    getQuote()
-                  }, 500)
+                    fade("text", true);
+                    getQuote();
+                  }, 500);
                 }}
               >
                 Random Quote
@@ -81,5 +81,5 @@ export default function Content(props: Props) {
         </Card.Body>
       </Card>
     </div>
-  )
+  );
 }
